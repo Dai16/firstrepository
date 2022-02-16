@@ -14,6 +14,11 @@ class PostController extends Controller
 dev_basis02
         return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
     }
+    
+    public function show(Post $post)
+    {
+        return view("posts/show")->with(["post" => $post]);
+    }
 }
 ?>
 
